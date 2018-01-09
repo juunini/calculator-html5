@@ -1,0 +1,170 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #747a81;
+    background: #22282e;
+    overflow: hidden;
+}
+
+.wrap{
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    display: inline-block;
+    width: 100%;
+    height: 470px;
+}
+
+.screenArea{
+    padding: 10px 20px;
+}
+
+.screenArea textarea:focus, .screenArea input:focus{
+    border: none;
+    outline: none;
+}
+
+.screenArea textarea{
+    display: block;
+    width: 100%;
+    height: 90px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    resize: none;
+}
+
+.screenArea input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    text-align: right;
+    background: none;
+    border: none;
+}
+
+.screenArea button{
+    cursor: pointer;
+}
+
+.screenArea button[name = 'unit']{
+    margin-right: 10px;
+}
+
+.screenArea button[name = 'unit'], .screenArea button[name = 'mode']{
+    background: none;
+    border: none;
+}
+
+.screenArea button[name = 'delete']:focus, .screenArea button[name = 'unit']:focus, .screenArea button[name = 'mode']:focus{
+    border: none;
+    outline: none;
+}
+
+.screenArea button[name = 'delete']{
+    float: right;
+    background: none;
+    border: none;
+}
+
+.buttonArea::after, .screenArea::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.buttonArea button{
+    display: block;
+    float: left;
+    width: 25%;
+    height: 60px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #1c1f24;
+    border: none;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+    cursor: pointer;
+}
+
+.buttonArea button:nth-child(4n -3){
+    border-left: 1px solid #666;
+}
+
+.buttonArea button:nth-child(17), .buttonArea button:nth-child(18), .buttonArea button:nth-child(19), .buttonArea button:nth-child(20){
+    border-bottom: 1px solid #666;
+}
+
+.buttonArea button:nth-child(1), .buttonArea button:nth-child(2), .buttonArea button:nth-child(3), .buttonArea button:nth-child(4), .buttonArea button:nth-child(4n - 8){
+    color: #fa683f;
+}
+
+.buttonArea button:last-child{
+    color: #333;
+    background: #dcdcdc;
+}
+
+button[name='zero'], button[name='one'], button[name='two'], button[name='three'], button[name='four'], button[name='five'], button[name='six'], button[name='seven'], button[name='eight'], button[name='nine'], button[name='dot'], button[name='plus_minus']{
+    background: #1a1a20;
+}
+
+/*under layer popup*/
+.unit{
+    display: none;
+}
+
+/*icon*/
+.length-icon{
+    zoom: 0.3;
+    border: 6px solid #fa683f;
+}
+.length-icon line{
+    stroke: #fa683f;
+    stroke-width: 6px;
+}
+
+.mode-icon{
+    zoom: 0.3;
+    border: 6px solid #747a81;
+}
+.mode-icon line{
+    stroke: #747a81;
+    stroke-width: 6px;
+}
+.mode-icon .dotted-line{
+    stroke-dasharray: 3, 5;
+}
+.mode-icon.on{
+    border: 6px solid #fa683f;
+}
+.mode-icon.on line{
+    stroke: #fa683f;
+}
+
+.delete-icon{
+    zoom: 0.3;
+}
+.delete-icon *{
+    fill: none;
+    stroke: #fa683f;
+    stroke-width: 6px;
+    stroke-linecap: "round";
+}
+
+.area-icon{
+    zoom: 0.3;
+    border: 6px solid #fa683f;
+}
+.area-icon *{
+    stroke: #fa683f;
+    stroke-width: 6px;
+}
